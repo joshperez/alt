@@ -1168,33 +1168,55 @@ var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["defau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-"use strict";
 
 var Symbol = _interopRequire(require("es-symbol"));
 
-var ACTION_HANDLER = Symbol("action creator handler");
+// action creator handler
+var ACTION_HANDLER = Symbol();
+
 exports.ACTION_HANDLER = ACTION_HANDLER;
-var ACTION_KEY = Symbol("holds the actions uid symbol for listening");
+// the action's uid symbol for listening
+var ACTION_KEY = Symbol();
+
 exports.ACTION_KEY = ACTION_KEY;
-var ACTION_UID = Symbol("the actions uid name");
+// the action's name
+var ACTION_UID = Symbol();
+
 exports.ACTION_UID = ACTION_UID;
-var ALL_LISTENERS = Symbol("name of listeners");
+// store all of a store's listeners
+var ALL_LISTENERS = Symbol();
+
 exports.ALL_LISTENERS = ALL_LISTENERS;
-var EE = Symbol("event emitter instance");
+// event emitter instance
+var EE = Symbol();
+
 exports.EE = EE;
-var INIT_SNAPSHOT = Symbol("init snapshot storage");
+// initial snapshot
+var INIT_SNAPSHOT = Symbol();
+
 exports.INIT_SNAPSHOT = INIT_SNAPSHOT;
-var LAST_SNAPSHOT = Symbol("last snapshot storage");
+// last snapshot
+var LAST_SNAPSHOT = Symbol();
+
 exports.LAST_SNAPSHOT = LAST_SNAPSHOT;
-var LIFECYCLE = Symbol("store lifecycle listeners");
+// all lifecycle listeners
+var LIFECYCLE = Symbol();
+
 exports.LIFECYCLE = LIFECYCLE;
-var LISTENERS = Symbol("stores action listeners storage");
+// store action listeners
+var LISTENERS = Symbol();
+
 exports.LISTENERS = LISTENERS;
-var PUBLIC_METHODS = Symbol("store public method storage");
+// public methods
+var PUBLIC_METHODS = Symbol();
+
 exports.PUBLIC_METHODS = PUBLIC_METHODS;
+// boolean if state has changed for emitting change event
 var STATE_CHANGED = Symbol();
+
 exports.STATE_CHANGED = STATE_CHANGED;
-var STATE_CONTAINER = Symbol("the state container");
+// contains all state
+var STATE_CONTAINER = Symbol();
 exports.STATE_CONTAINER = STATE_CONTAINER;
 
 },{"es-symbol":1}],11:[function(require,module,exports){
