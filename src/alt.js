@@ -16,11 +16,11 @@ import {
   PUBLIC_METHODS,
   STATE_CHANGED,
   STATE_CONTAINER
-} from '../src/shared/symbols'
-import ActionCreator from '../src/action/ActionCreator'
-import {createStoreFromObject, createStoreFromClass} from '../src/store/createStore'
-import {warn} from '../src/shared/warnings'
-import {getInternalMethods, builtInProto} from '../src/shared/helpers'
+} from './shared/symbols'
+import ActionCreator from './action/ActionCreator'
+import {createStoreFromObject, createStoreFromClass} from './store/createStore'
+import {warn} from './shared/warnings'
+import {getInternalMethods, builtInProto} from './shared/helpers'
 
 const GlobalActionsNameRegistry = {}
 

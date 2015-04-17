@@ -1,6 +1,6 @@
 'use strict'
 
-import {PUBLIC_METHODS} from '../../src/shared/symbols'
+import {PUBLIC_METHODS} from '../shared/symbols'
 
 const StoreMixinEssentials = {
   waitFor(sources) {

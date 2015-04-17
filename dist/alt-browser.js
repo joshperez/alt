@@ -735,10 +735,10 @@ var _createClass = (function () { function defineProperties(target, props) { for
 
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
 
-var _srcSharedSymbols = require("../../src/shared/symbols");
+var _sharedSymbols = require("../shared/symbols");
 
-var ACTION_HANDLER = _srcSharedSymbols.ACTION_HANDLER;
-var ACTION_UID = _srcSharedSymbols.ACTION_UID;
+var ACTION_HANDLER = _sharedSymbols.ACTION_HANDLER;
+var ACTION_UID = _sharedSymbols.ACTION_UID;
 
 var ActionCreator = (function () {
   function ActionCreator(alt, name, action, actions) {
@@ -763,7 +763,7 @@ var ActionCreator = (function () {
 
 module.exports = ActionCreator;
 
-},{"../../src/shared/symbols":10}],8:[function(require,module,exports){
+},{"../shared/symbols":10}],8:[function(require,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -784,34 +784,34 @@ var Symbol = _interopRequire(require("es-symbol"));
 
 var assign = _interopRequire(require("object-assign"));
 
-var _srcSharedSymbols = require("../src/shared/symbols");
+var _sharedSymbols = require("./shared/symbols");
 
-var ACTION_HANDLER = _srcSharedSymbols.ACTION_HANDLER;
-var ACTION_KEY = _srcSharedSymbols.ACTION_KEY;
-var ACTION_UID = _srcSharedSymbols.ACTION_UID;
-var ALL_LISTENERS = _srcSharedSymbols.ALL_LISTENERS;
-var EE = _srcSharedSymbols.EE;
-var INIT_SNAPSHOT = _srcSharedSymbols.INIT_SNAPSHOT;
-var LAST_SNAPSHOT = _srcSharedSymbols.LAST_SNAPSHOT;
-var LIFECYCLE = _srcSharedSymbols.LIFECYCLE;
-var LISTENERS = _srcSharedSymbols.LISTENERS;
-var PUBLIC_METHODS = _srcSharedSymbols.PUBLIC_METHODS;
-var STATE_CHANGED = _srcSharedSymbols.STATE_CHANGED;
-var STATE_CONTAINER = _srcSharedSymbols.STATE_CONTAINER;
+var ACTION_HANDLER = _sharedSymbols.ACTION_HANDLER;
+var ACTION_KEY = _sharedSymbols.ACTION_KEY;
+var ACTION_UID = _sharedSymbols.ACTION_UID;
+var ALL_LISTENERS = _sharedSymbols.ALL_LISTENERS;
+var EE = _sharedSymbols.EE;
+var INIT_SNAPSHOT = _sharedSymbols.INIT_SNAPSHOT;
+var LAST_SNAPSHOT = _sharedSymbols.LAST_SNAPSHOT;
+var LIFECYCLE = _sharedSymbols.LIFECYCLE;
+var LISTENERS = _sharedSymbols.LISTENERS;
+var PUBLIC_METHODS = _sharedSymbols.PUBLIC_METHODS;
+var STATE_CHANGED = _sharedSymbols.STATE_CHANGED;
+var STATE_CONTAINER = _sharedSymbols.STATE_CONTAINER;
 
-var ActionCreator = _interopRequire(require("../src/action/ActionCreator"));
+var ActionCreator = _interopRequire(require("./action/ActionCreator"));
 
-var _srcStoreCreateStore = require("../src/store/createStore");
+var _storeCreateStore = require("./store/createStore");
 
-var createStoreFromObject = _srcStoreCreateStore.createStoreFromObject;
-var createStoreFromClass = _srcStoreCreateStore.createStoreFromClass;
+var createStoreFromObject = _storeCreateStore.createStoreFromObject;
+var createStoreFromClass = _storeCreateStore.createStoreFromClass;
 
-var warn = require("../src/shared/warnings").warn;
+var warn = require("./shared/warnings").warn;
 
-var _srcSharedHelpers = require("../src/shared/helpers");
+var _sharedHelpers = require("./shared/helpers");
 
-var getInternalMethods = _srcSharedHelpers.getInternalMethods;
-var builtInProto = _srcSharedHelpers.builtInProto;
+var getInternalMethods = _sharedHelpers.getInternalMethods;
+var builtInProto = _sharedHelpers.builtInProto;
 
 var GlobalActionsNameRegistry = {};
 
@@ -1131,7 +1131,7 @@ var Alt = (function () {
 
 module.exports = Alt;
 
-},{"../src/action/ActionCreator":7,"../src/shared/helpers":9,"../src/shared/symbols":10,"../src/shared/warnings":11,"../src/store/createStore":15,"es-symbol":1,"flux":3,"object-assign":6}],9:[function(require,module,exports){
+},{"./action/ActionCreator":7,"./shared/helpers":9,"./shared/symbols":10,"./shared/warnings":11,"./store/createStore":15,"es-symbol":1,"flux":3,"object-assign":6}],9:[function(require,module,exports){
 "use strict";
 
 exports.getInternalMethods = getInternalMethods;
@@ -1231,20 +1231,20 @@ var EventEmitter = _interopRequire(require("eventemitter3"));
 
 var assign = _interopRequire(require("object-assign"));
 
-var _srcSharedWarnings = require("../../src/shared/warnings");
+var _sharedWarnings = require("../shared/warnings");
 
-var warn = _srcSharedWarnings.warn;
-var deprecatedBeforeAfterEachWarning = _srcSharedWarnings.deprecatedBeforeAfterEachWarning;
+var warn = _sharedWarnings.warn;
+var deprecatedBeforeAfterEachWarning = _sharedWarnings.deprecatedBeforeAfterEachWarning;
 
-var _srcSharedSymbols = require("../../src/shared/symbols");
+var _sharedSymbols = require("../shared/symbols");
 
-var ALL_LISTENERS = _srcSharedSymbols.ALL_LISTENERS;
-var EE = _srcSharedSymbols.EE;
-var LIFECYCLE = _srcSharedSymbols.LIFECYCLE;
-var LISTENERS = _srcSharedSymbols.LISTENERS;
-var PUBLIC_METHODS = _srcSharedSymbols.PUBLIC_METHODS;
-var STATE_CHANGED = _srcSharedSymbols.STATE_CHANGED;
-var STATE_CONTAINER = _srcSharedSymbols.STATE_CONTAINER;
+var ALL_LISTENERS = _sharedSymbols.ALL_LISTENERS;
+var EE = _sharedSymbols.EE;
+var LIFECYCLE = _sharedSymbols.LIFECYCLE;
+var LISTENERS = _sharedSymbols.LISTENERS;
+var PUBLIC_METHODS = _sharedSymbols.PUBLIC_METHODS;
+var STATE_CHANGED = _sharedSymbols.STATE_CHANGED;
+var STATE_CONTAINER = _sharedSymbols.STATE_CONTAINER;
 
 var AltStore = (function () {
   function AltStore(dispatcher, model, state, StoreModel) {
@@ -1354,10 +1354,10 @@ var AltStore = (function () {
 
 module.exports = AltStore;
 
-},{"../../src/shared/symbols":10,"../../src/shared/warnings":11,"eventemitter3":2,"object-assign":6}],13:[function(require,module,exports){
+},{"../shared/symbols":10,"../shared/warnings":11,"eventemitter3":2,"object-assign":6}],13:[function(require,module,exports){
 "use strict";
 
-var PUBLIC_METHODS = require("../../src/shared/symbols").PUBLIC_METHODS;
+var PUBLIC_METHODS = require("../shared/symbols").PUBLIC_METHODS;
 
 var StoreMixinEssentials = {
   waitFor: function waitFor(sources) {
@@ -1397,15 +1397,15 @@ var StoreMixinEssentials = {
 
 module.exports = StoreMixinEssentials;
 
-},{"../../src/shared/symbols":10}],14:[function(require,module,exports){
+},{"../shared/symbols":10}],14:[function(require,module,exports){
 "use strict";
 
-var _srcSharedSymbols = require("../../src/shared/symbols");
+var _sharedSymbols = require("../shared/symbols");
 
-var ACTION_KEY = _srcSharedSymbols.ACTION_KEY;
-var ALL_LISTENERS = _srcSharedSymbols.ALL_LISTENERS;
-var LIFECYCLE = _srcSharedSymbols.LIFECYCLE;
-var LISTENERS = _srcSharedSymbols.LISTENERS;
+var ACTION_KEY = _sharedSymbols.ACTION_KEY;
+var ALL_LISTENERS = _sharedSymbols.ALL_LISTENERS;
+var LIFECYCLE = _sharedSymbols.LIFECYCLE;
+var LISTENERS = _sharedSymbols.LISTENERS;
 
 var StoreMixinListeners = {
   on: function on(lifecycleEvent, handler) {
@@ -1483,7 +1483,7 @@ var StoreMixinListeners = {
 
 module.exports = StoreMixinListeners;
 
-},{"../../src/shared/symbols":10}],15:[function(require,module,exports){
+},{"../shared/symbols":10}],15:[function(require,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -1505,25 +1505,25 @@ Object.defineProperty(exports, "__esModule", {
 
 var assign = _interopRequire(require("object-assign"));
 
-var AltStore = _interopRequire(require("../../src/store/AltStore"));
+var AltStore = _interopRequire(require("../store/AltStore"));
 
-var StoreMixinListeners = _interopRequire(require("../../src/store/StoreMixinListeners"));
+var StoreMixinListeners = _interopRequire(require("../store/StoreMixinListeners"));
 
-var StoreMixinEssentials = _interopRequire(require("../../src/store/StoreMixinEssentials"));
+var StoreMixinEssentials = _interopRequire(require("../store/StoreMixinEssentials"));
 
-var _srcSharedHelpers = require("../../src/shared/helpers");
+var _sharedHelpers = require("../shared/helpers");
 
-var getInternalMethods = _srcSharedHelpers.getInternalMethods;
-var builtIns = _srcSharedHelpers.builtIns;
+var getInternalMethods = _sharedHelpers.getInternalMethods;
+var builtIns = _sharedHelpers.builtIns;
 
-var _srcSharedSymbols = require("../../src/shared/symbols");
+var _sharedSymbols = require("../shared/symbols");
 
-var ALL_LISTENERS = _srcSharedSymbols.ALL_LISTENERS;
-var LIFECYCLE = _srcSharedSymbols.LIFECYCLE;
-var LISTENERS = _srcSharedSymbols.LISTENERS;
-var PUBLIC_METHODS = _srcSharedSymbols.PUBLIC_METHODS;
-var STATE_CHANGED = _srcSharedSymbols.STATE_CHANGED;
-var STATE_CONTAINER = _srcSharedSymbols.STATE_CONTAINER;
+var ALL_LISTENERS = _sharedSymbols.ALL_LISTENERS;
+var LIFECYCLE = _sharedSymbols.LIFECYCLE;
+var LISTENERS = _sharedSymbols.LISTENERS;
+var PUBLIC_METHODS = _sharedSymbols.PUBLIC_METHODS;
+var STATE_CHANGED = _sharedSymbols.STATE_CHANGED;
+var STATE_CONTAINER = _sharedSymbols.STATE_CONTAINER;
 
 function doSetState(store, storeInstance, nextState) {
   if (!nextState) {
@@ -1634,5 +1634,5 @@ function createStoreFromClass(alt, StoreModel, key) {
   return storeInstance;
 }
 
-},{"../../src/shared/helpers":9,"../../src/shared/symbols":10,"../../src/store/AltStore":12,"../../src/store/StoreMixinEssentials":13,"../../src/store/StoreMixinListeners":14,"object-assign":6}]},{},[8])(8)
+},{"../shared/helpers":9,"../shared/symbols":10,"../store/AltStore":12,"../store/StoreMixinEssentials":13,"../store/StoreMixinListeners":14,"object-assign":6}]},{},[8])(8)
 });

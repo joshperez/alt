@@ -5,7 +5,7 @@ import {
   ALL_LISTENERS,
   LIFECYCLE,
   LISTENERS
-} from '../../src/shared/symbols'
+} from '../shared/symbols'
 
 const StoreMixinListeners = {
   on(lifecycleEvent, handler) {

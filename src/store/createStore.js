@@ -1,10 +1,10 @@
 'use strict'
 
 import assign from 'object-assign'
-import AltStore from '../../src/store/AltStore'
-import StoreMixinListeners from '../../src/store/StoreMixinListeners'
-import StoreMixinEssentials from '../../src/store/StoreMixinEssentials'
-import {getInternalMethods, builtIns} from '../../src/shared/helpers'
+import AltStore from '../store/AltStore'
+import StoreMixinListeners from '../store/StoreMixinListeners'
+import StoreMixinEssentials from '../store/StoreMixinEssentials'
+import {getInternalMethods, builtIns} from '../shared/helpers'
 import {
   ALL_LISTENERS,
   LIFECYCLE,
@@ -12,7 +12,7 @@ import {
   PUBLIC_METHODS,
   STATE_CHANGED,
   STATE_CONTAINER
-} from '../../src/shared/symbols'
+} from '../shared/symbols'
 
 function doSetState(store, storeInstance, nextState) {
   if (!nextState) {
